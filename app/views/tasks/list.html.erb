@@ -1,9 +1,12 @@
 <section>
   <h2>To do: </h2>
-  <ul>
-    <% @list.each do |item| %>
-      <li><strong>do: </strong><%= item.title %> <strong>completed :</strong> <%= item.completed ? 'done' : 'not done yet' %></li>
-      <%= link_to 'see more', show_one_path(item) %>
+  <ul class='tasks-list-container'>
+    <% @list.each_with_index do |item, index| %>
+      <article>
+        <p><%= index + 1 %> - <strong>do: </strong><%= item.title %> <strong>completed :</strong> <%= item.status %></p>
+        <%= link_to 'details', show_one_path(item) %>
+        <%= link_to 'delete', delete_one_path(item), data: {turbo_method: :delete} %>
+      </article>
     <% end %>
   </ul>
 </section>

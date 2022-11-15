@@ -1,0 +1,18 @@
+.tasks-list-container article {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.tasks-list-container article > a {
+  padding: 0.5rem;
+  margin-left: 2rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  border-radius: 0.3rem;
+}
+
+.tasks-list-container article > a:hover {
+  box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.2);
+}

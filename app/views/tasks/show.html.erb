@@ -1,7 +1,8 @@
 <section>
-  <h2>Task: <%= @task.title%> </h2>
-  <p>to do:<%= @task.details%></p>
-  <p>completed: <%= @task.completed ? 'done' : 'not done' %></p>
-  <%= link_to 'edit', edit_path %>
-
+  <article class="show-article">
+    <h2>Task: <%= @task.title%> </h2>
+    <p><strong>to do: </strong><%= @task.details%></p>
+    <p><strong>completed: </strong> <%= @task.status %></p>
+    <%= link_to 'edit', edit_path %>
+  </article>
 </section>

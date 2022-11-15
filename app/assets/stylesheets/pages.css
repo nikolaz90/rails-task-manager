@@ -1,0 +1,10 @@
+section {
+  padding: 1rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  min-height: 80vh;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
